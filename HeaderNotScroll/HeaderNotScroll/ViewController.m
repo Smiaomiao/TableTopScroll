@@ -60,7 +60,7 @@
 }
 
 - (void)suspendTopView{
-    self.topView.frame = CGRectMake(0, -120, CGRectGetWidth(self.view.frame), 60);
+    self.topView.frame = CGRectMake(0, -120, CGRectGetWidth(self.view.frame), 180);
     [self.topView removeFromSuperview];
     [self.view addSubview:self.topView];
 }
@@ -86,6 +86,7 @@
     if (!_topView) {
         _topView = [UIView new];
         _topView.backgroundColor = [UIColor whiteColor];
+        _topView.userInteractionEnabled = YES;
         
         CGFloat width = CGRectGetWidth(self.view.frame);
         
